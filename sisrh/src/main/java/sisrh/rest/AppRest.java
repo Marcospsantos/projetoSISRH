@@ -28,7 +28,19 @@ public class AppRest extends Application {
 		resources.add(EmpregadoRest.class);
 		resources.add(SolicitacaoRest.class);
 
-		
+		resources.add(ApiListingResource.class);
+		resources.add(SwaggerSerializers.class);
+		return resources;
+	}
+
+	@Override
+	public Set<Class<?>> getClasses() {
+		Set<Class<?>> resources = new HashSet<>();
+		resources.add(SistemaRest.class);
+		resources.add(EmpregadoRest.class);
+		resources.add(SolicitacaoRest.class);
+		resources.add(LoginUnicoRest.class);
+
 		resources.add(ApiListingResource.class);
 		resources.add(SwaggerSerializers.class);
 		return resources;
